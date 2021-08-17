@@ -12,7 +12,7 @@ const Header = () => (
       query {
         art_build: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "header" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -31,17 +31,18 @@ const Header = () => (
             </Art>
             <Text>
               <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
+                A gdyby tak filtrować fake news?
               </h1>
+              <p>W dzisiejszej dobie natłoku informacji coraz trudniej jest sprawdzać pochodzenie newsów i artykułów. Przenieś tą odpowiedzialność na <b>Washed.pl</b></p>
+              <br />
               <br />
               <p>
                 <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
+                  Dowiedz się więcej
                 </StyledExternalLink>
+                <StyledExternalLink2 href="https://github.com/ajayns/gatsby-absurd">
+                  Zobacz plany
+                </StyledExternalLink2>
               </p>
             </Text>
           </Grid>
@@ -99,11 +100,30 @@ const Text = styled.div`
 `;
 
 const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
+  color: white;
   text-decoration: none;
-
+  background: black;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 15px 40px;
+  margin-right: 5px;
   &:hover {
-    color: ${props => props.theme.color.black.regular};
+    color: black;
+    background: #d7d3d3;
+  }
+`;
+
+const StyledExternalLink2 = styled(ExternalLink)`
+  color: black;
+  text-decoration: none;
+  background: white;
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 15px 40px;
+  margin-right: 5px;
+  &:hover {
+    color: black;
+    background: #d7d3d3;
   }
 `;
 
