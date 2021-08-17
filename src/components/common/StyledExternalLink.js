@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ExternalLink from './ExternalLink';
 
-const StyledExternalLink = styled(ExternalLink)`
+export const StyledExternalLink = styled(ExternalLink)`
   color: white;
   text-decoration: none;
   background: black;
@@ -15,7 +15,7 @@ const StyledExternalLink = styled(ExternalLink)`
   }
 `;
 
-const StyledExternalLinkWhite = styled(ExternalLink)`
+export const StyledExternalLinkWhite = styled(ExternalLink)`
   color: black;
   text-decoration: none;
   background: white;
@@ -28,5 +28,4 @@ const StyledExternalLinkWhite = styled(ExternalLink)`
     background: #d7d3d3;
   }
 `;
-
 export default StyledExternalLinkWhite;

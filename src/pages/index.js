@@ -4,18 +4,14 @@ import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
 import Header from '@sections/Header';
-import Brands from '@sections/Brands';
-import Team from '@sections/Team';
-import Faq from '@sections/Faq';
+import Chart from '@sections/Chart';
 import Footer from '@sections/Footer';
 
 const IndexPage = () => (
   <Layout>
     <Navbar />
     <Header />
-    <Brands />
-    <Team />
-    <Faq />
+    <Chart />
     <Footer />
   </Layout>
 );

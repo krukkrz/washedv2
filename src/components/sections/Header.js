@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-import StyledExternalLinkWhite from '../common/StyledExternalLink';
+import { StyledExternalLink } from '../common/StyledExternalLink';
 
 const Header = () => (
   <StaticQuery
@@ -41,6 +41,7 @@ const Header = () => (
                 <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
                   Dowiedz się więcej
                 </StyledExternalLink>
+                <BreakOnSmall />
                 <StyledExternalLink2 href="https://github.com/ajayns/gatsby-absurd">
                   Zobacz plany
                 </StyledExternalLink2>
@@ -75,6 +76,14 @@ const Art = styled.figure`
   }
 `;
 
+const BreakOnSmall = styled.div`{
+  display: none;
+  height: 30px;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    display: inherit;
+  }
+}`
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -96,20 +105,6 @@ const Text = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
-  }
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: white;
-  text-decoration: none;
-  background: black;
-  border-radius: 30px;
-  font-size: 18px;
-  padding: 15px 40px;
-  margin-right: 5px;
-  &:hover {
-    color: black;
-    background: #d7d3d3;
   }
 `;
 
