@@ -15,6 +15,7 @@ import {
 } from './style';
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
+import ExternalLink from '../ExternalLink';
 
 const NAV_ITEMS = ['Zarejestruj', 'Zaloguj'];
 
@@ -61,7 +62,9 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Brand>
-            <img src={logo}/>
+            <ExternalLink href="#home">
+              <img src={logo}/>
+            </ExternalLink>
           </Brand>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>

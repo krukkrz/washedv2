@@ -24,32 +24,34 @@ const Header = () => (
       }
     `}
     render={data => (
-      <HeaderWrapper>
-        <Container>
-          <Grid>
-            <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
-            </Art>
-            <Text>
-              <h1>
-                A gdyby tak filtrować fake news?
-              </h1>
-              <p>W dzisiejszej dobie natłoku informacji coraz trudniej jest sprawdzać pochodzenie newsów i artykułów. Przenieś tą odpowiedzialność na <b>Washed.pl</b></p>
-              <br />
-              <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Dowiedz się więcej
-                </StyledExternalLink>
-                <BreakOnSmall />
-                <StyledExternalLink2 href="https://github.com/ajayns/gatsby-absurd">
-                  Zobacz plany
-                </StyledExternalLink2>
-              </p>
-            </Text>
-          </Grid>
-        </Container>
-      </HeaderWrapper>
+      <section id="home">
+        <HeaderWrapper>
+          <Container>
+            <Grid>
+              <Art>
+                <Img fluid={data.art_build.childImageSharp.fluid} />
+              </Art>
+              <Text>
+                <h1>
+                  A gdyby tak filtrować fake news?
+                </h1>
+                <p>W dzisiejszej dobie natłoku informacji coraz trudniej jest sprawdzać pochodzenie newsów i artykułów. Przenieś tą odpowiedzialność na <b>Washed.pl</b></p>
+                <br />
+                <br />
+                <p>
+                  <StyledExternalLink href="error">
+                    Dowiedz się więcej
+                  </StyledExternalLink>
+                  <BreakOnSmall />
+                  <StyledExternalLink2 href="#pricing">
+                    Zobacz plany
+                  </StyledExternalLink2>
+                </p>
+              </Text>
+            </Grid>
+          </Container>
+        </HeaderWrapper>
+      </section>
     )}
   />
 );
