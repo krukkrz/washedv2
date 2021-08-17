@@ -12,6 +12,7 @@ import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
 import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
 import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
 import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
+import StyledExternalLinkWhite from '../common/StyledExternalLink';
 
 const LOGOS = [
   {
@@ -46,7 +47,7 @@ const UsedBy = () => (
       query {
         art_story: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "tell_story" }
+          name: { eq: "pie_chart" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1200) {
@@ -60,14 +61,17 @@ const UsedBy = () => (
       <Section id="brands" accent>
         <StyledContainer>
           <div>
-            <h1>Used by biggest in tech</h1>
-            <LogoGrid>
-              {LOGOS.map(({ logo, link }) => (
-                <ExternalLink key={link} href={link}>
-                  {logo()}
-                </ExternalLink>
-              ))}
-            </LogoGrid>
+            <Text>
+              <h1>52% Polaków</h1>
+              <br/>
+              <p>
+                Tylu z nas twierdzi, że nie ufa informacjom podawanym w mediach. Jeżeli Ciebie też to męczy, dołącz do <b>Washed.pl</b>
+              </p>
+              <br/>
+              <StyledExternalLinkWhite>
+                Dołącz
+              </StyledExternalLinkWhite>
+            </Text>
           </div>
           <Art>
             <Img fluid={data.art_story.childImageSharp.fluid} />
@@ -78,21 +82,13 @@ const UsedBy = () => (
   />
 );
 
-const LogoGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 64px;
-  justify-items: center;
-  margin-top: 96px;
-
-  a {
-    svg {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    grid-template-columns: 1fr;
+const Text = styled.div`
+  height: 60vh;
+  color: white;
+  width: 45vw;
+  p {
+    color: white;
+    margin-bottom: 60px;
   }
 `;
 
@@ -109,7 +105,7 @@ const StyledContainer = styled(Container)`
 const Art = styled.figure`
   width: 600px;
   position: absolute;
-  top: -12%;
+  top: -20%;
   right: 50%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {

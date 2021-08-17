@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
+import StyledExternalLinkWhite from '../common/StyledExternalLink';
 
 const Header = () => (
   <StaticQuery
@@ -53,7 +54,6 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
   padding-top: 96px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -116,11 +116,12 @@ const StyledExternalLink = styled(ExternalLink)`
 const StyledExternalLink2 = styled(ExternalLink)`
   color: black;
   text-decoration: none;
-  background: white;
+  background: #d7d3d3;
   border-radius: 30px;
   font-size: 18px;
   padding: 15px 40px;
   margin-right: 5px;
+
   &:hover {
     color: black;
     background: #d7d3d3;
