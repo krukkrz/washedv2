@@ -39,7 +39,7 @@ const Header = () => (
                 <br />
                 <br />
                 <p>
-                  <StyledExternalLink href="error">
+                  <StyledExternalLink href="/more">
                     Dowiedz się więcej
                   </StyledExternalLink>
                   <BreakOnSmall />

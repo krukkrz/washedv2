@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import mocks from '../../images/mocks/mockups.png'
+import mocks from '../../images/mocks/mockups.png';
 import logoWhite from '../../images/logos/logo_white.svg';
 
 import { Container } from '@components/global';
@@ -29,16 +29,9 @@ const Footer = () => (
     `}
     render={data => (
       <React.Fragment>
-        {/*<Art>*/}
-        {/*  <Img*/}
-        {/*    fluid={data.art_pot.childImageSharp.fluid}*/}
-        {/*    style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}*/}
-        {/*  />*/}
-        {/*</Art>*/}
-
         <Grid>
           <Art>
-            <img src={mocks} alt=""/>
+            <img src={mocks} alt='' />
           </Art>
           <Text>
             <h1>
@@ -48,7 +41,7 @@ const Footer = () => (
             <br />
             <br />
             <p>
-              <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
+              <StyledExternalLink href='https://github.com/ajayns/gatsby-absurd'>
                 Zainstaluj
               </StyledExternalLink>
             </p>
@@ -57,12 +50,12 @@ const Footer = () => (
         <FooterWrapper>
           <StyledContainer>
             <Copyright>
-              <img src={logoWhite}/>
-              <br/>
+              <img src={logoWhite} />
+              <br />
               <span>
                 Illustrations by
                 {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
+                <ExternalLink href='https://twitter.com/diana_valeanu'>
                   @diana_valeanu
                 </ExternalLink>
               </span>
@@ -77,6 +70,7 @@ const Footer = () => (
 const FooterWrapper = styled.footer`
   background-color: ${props => props.theme.color.primary};
   padding: 32px 0;
+  margin-top: 60px;
 `;
 
 const Copyright = styled.div`
@@ -96,7 +90,7 @@ const Copyright = styled.div`
 const Art = styled.figure`
   width: 100%;
   margin: 0;
-  
+
   img {
     width: 100%;
   }
@@ -140,7 +134,13 @@ const Grid = styled.div`
 
 const Text = styled.div`
   margin-top: 60px;
-  text-align: center;
+  text-align: left;
   justify-self: center;
+  
+  margin-right: 50px;
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    text-align: center;
+  }
 `;
 export default Footer;

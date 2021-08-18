@@ -62,7 +62,7 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Brand>
-            <ExternalLink href="#home">
+            <ExternalLink href="./#">
               <img src={logo}/>
             </ExternalLink>
           </Brand>
