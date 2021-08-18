@@ -3,10 +3,10 @@ import Helmet from 'react-helmet';
 
 const SEO_DATA = {
   description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  title: 'Washed',
   url: '',
   author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
+  keywords: ['news', 'fake news'],
   img: '',
   twitterId: '@ajayns_',
   facebookId: '',
