@@ -1,38 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
+import ExternalLink from '../common/ExternalLink';
 
 const Pricing = () => (
-  <Section id="pricing">
+  <Section id='pricing'>
     <Title>Wybierz plan odpowiedni dla Ciebie</Title>
     <PricingWrapper>
-      <PricingItem>
-        <h1>Premium</h1>
-        <FeatureList>
-          <li>
-            dostęp do wszystkich artykułów
-          </li>
-          <li>
-            pełny raport dla każdego artykułu
-          </li>
-        </FeatureList>
-        <Price>10 zł miesięcznie</Price>
-      </PricingItem>
-      <PricingItem>
-        <h1>Free</h1>
-        <FeatureList>
-          <li>
-            darmowe 10 artykułów dziennie
-          </li>
-          <li>
-            dostęp do częściowego raportu
-          </li>
-        </FeatureList>
-        <Price>za darmo</Price>
-      </PricingItem>
+      <ExternalLink href='/error'>
+        <PricingItem>
+          <h1>Premium</h1>
+          <FeatureList>
+            <li>
+              dostęp do wszystkich artykułów
+            </li>
+            <li>
+              pełny raport dla każdego artykułu
+            </li>
+          </FeatureList>
+          <Price>10 zł miesięcznie</Price>
+        </PricingItem>
+      </ExternalLink>
+      <ExternalLink href='/error'>
+        <PricingItem>
+          <h1>Free</h1>
+          <FeatureList>
+            <li>
+              darmowe 10 artykułów dziennie
+            </li>
+            <li>
+              dostęp do częściowego raportu
+            </li>
+          </FeatureList>
+          <Price>za darmo</Price>
+        </PricingItem>
+      </ExternalLink>
     </PricingWrapper>
   </Section>
-)
+);
 
 const Price = styled.div`{
   font-size: 30px;
@@ -40,18 +45,18 @@ const Price = styled.div`{
   bottom: 10px;
   width: 93%;
   text-align: center;
-  
+
   color: white;
   background: black;
   padding-top: 5px;
   padding-bottom: 10px;
-}`
+}`;
 
 const FeatureList = styled.ul`{
   text-align: left;
   margin-top: 40px;
   margin-bottom: 40px;
-}`
+}`;
 
 const Title = styled.div`{
   font-family: ${props => props.theme.font.primary};
@@ -60,7 +65,7 @@ const Title = styled.div`{
   margin-top: 60px;
   margin-bottom: 50px;
   padding: 5px;
-}`
+}`;
 
 const PricingWrapper = styled.div`{
   clear: both;
@@ -68,9 +73,10 @@ const PricingWrapper = styled.div`{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-}`
+}`;
 
 const PricingItem = styled.div`{
+  color: black;
   float: left;
   margin: 10px;
   width: 300px;
@@ -85,6 +91,6 @@ const PricingItem = styled.div`{
     margin-bottom: 30px;
     float: none;
   }
-}`
+}`;
 
 export default Pricing;

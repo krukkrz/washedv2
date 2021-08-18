@@ -41,7 +41,7 @@ const Footer = () => (
             <br />
             <br />
             <p>
-              <StyledExternalLink href='https://github.com/ajayns/gatsby-absurd'>
+              <StyledExternalLink href='/error'>
                 Zainstaluj
               </StyledExternalLink>
             </p>

@@ -35,9 +35,9 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <ExternalLink href='/error'>
       {item}
-    </AnchorLink>
+    </ExternalLink>
   );
 
   getNavList = ({ mobile = false }) => (
