@@ -12,7 +12,7 @@ const UsedBy = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_story: file(
+        art_chart: file(
           sourceInstanceName: { eq: "art" }
           name: { eq: "pie_chart" }
         ) {
@@ -41,7 +41,7 @@ const UsedBy = () => (
             </Text>
           </div>
           <Art>
-            <Img fluid={data.art_story.childImageSharp.fluid} />
+            <Img fluid={data.art_chart.childImageSharp.fluid} />
           </Art>
         </StyledContainer>
       </Section>

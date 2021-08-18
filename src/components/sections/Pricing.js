@@ -36,6 +36,15 @@ const Pricing = () => (
 
 const Price = styled.div`{
   font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  width: 93%;
+  text-align: center;
+  
+  color: white;
+  background: black;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }`
 
 const FeatureList = styled.ul`{
@@ -65,10 +74,12 @@ const PricingItem = styled.div`{
   float: left;
   margin: 10px;
   width: 300px;
+  height: 300px;
   border-color: black;
   border-style: solid;
   text-align: center;
   padding: 10px;
+  position: relative;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     margin-bottom: 30px;

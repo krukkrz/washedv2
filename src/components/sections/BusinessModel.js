@@ -48,7 +48,7 @@ const Text = styled.div`{
   margin-right: 50px;
   font-family: ${props => props.theme.font.secondary};
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${props => props.theme.screen.md}) {
     margin-right: 0px;
     padding: 10px;
   }
