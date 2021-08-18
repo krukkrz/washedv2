@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import chart from '../../images/art/pie_chart.png';
 
 import { Section, Container } from '@components/global';
 
@@ -25,16 +24,17 @@ const UsedBy = () => (
       }
     `}
     render={data => (
-      <Section id="chart" accent>
+      <Section id='chart' accent>
         <StyledContainer>
           <div>
             <Text>
               <h1>52% Polaków</h1>
-              <br/>
+              <br />
               <p>
-                Tylu z nas twierdzi, że nie ufa informacjom podawanym w mediach. Jeżeli Ciebie też to męczy, dołącz do <b>Washed.pl</b>
+                Tylu z nas twierdzi, że nie ufa informacjom podawanym w mediach. Jeżeli Ciebie też to męczy, dołącz
+                do <b>Washed.pl</b>
               </p>
-              <br/>
+              <br />
               <StyledExternalLinkWhite>
                 Dołącz
               </StyledExternalLinkWhite>
@@ -53,6 +53,7 @@ const Text = styled.div`
   height: 60vh;
   color: white;
   width: 45vw;
+
   p {
     color: white;
     margin-bottom: 60px;
