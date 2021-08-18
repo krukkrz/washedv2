@@ -35,7 +35,7 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <ExternalLink href='/error'>
+    <ExternalLink href='/#pricing'>
       {item}
     </ExternalLink>
   );

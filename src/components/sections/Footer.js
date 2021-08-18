@@ -41,7 +41,7 @@ const Footer = () => (
             <br />
             <br />
             <p>
-              <StyledExternalLink href='/error'>
+              <StyledExternalLink href='#pricing'>
                 Zainstaluj
               </StyledExternalLink>
             </p>

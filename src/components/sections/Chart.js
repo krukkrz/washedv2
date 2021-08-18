@@ -35,7 +35,7 @@ const UsedBy = () => (
                 do <b>Washed.pl</b>
               </p>
               <br />
-              <StyledExternalLinkWhite href='/error'>
+              <StyledExternalLinkWhite href='/#pricing'>
                 Dołącz
               </StyledExternalLinkWhite>
             </Text>

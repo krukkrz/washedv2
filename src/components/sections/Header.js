@@ -43,7 +43,7 @@ const Header = () => (
                     Dowiedz się więcej
                   </StyledExternalLink>
                   <BreakOnSmall />
-                  <StyledExternalLink2 href="#pricing">
+                  <StyledExternalLink2 href="/#pricing">
                     Zobacz plany
                   </StyledExternalLink2>
                 </p>
