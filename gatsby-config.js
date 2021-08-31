@@ -2,6 +2,14 @@ const path = require('path');
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 2429938,
+        sv: 6,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-svgr`,
