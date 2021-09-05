@@ -136,11 +136,12 @@ const Text = styled.div`
   margin-top: 60px;
   text-align: left;
   justify-self: center;
-  
   margin-right: 50px;
 
   @media (max-width: ${props => props.theme.screen.sm}) {
     text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 `;
 export default Footer;

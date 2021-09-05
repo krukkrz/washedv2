@@ -2,6 +2,7 @@ const theme = {
   font: {
     primary: `'Prata', serif`,
     secondary: `'Playfair Display', sans-serif`,
+    tertiary: `'Bebas neue', cursive`,
   },
   font_size: {
     small: 'font-size: 20px; line-height: 30px',

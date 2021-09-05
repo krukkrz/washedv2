@@ -16,10 +16,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
   }
 
-  h1, h2 {
-    font-family: ${props => props.theme.font.primary};
-  }
-
   h1 {
     ${props => props.theme.font_size.xlarge};
   }
@@ -65,6 +61,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     cursor: pointer;
+    text-decoration: none;
   }
 `;
 

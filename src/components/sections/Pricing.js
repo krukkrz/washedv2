@@ -1,61 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
-import ExternalLink from '../common/ExternalLink';
+import PricingItem from '../common/PricingItem';
 
 const Pricing = () => (
   <Section id='pricing'>
     <Title>Wybierz plan odpowiedni dla Ciebie</Title>
     <PricingWrapper>
-      <ExternalLink href='/error'>
-        <PricingItem>
-          <h1>Premium</h1>
-          <FeatureList>
-            <li>
-              dostęp do wszystkich artykułów
-            </li>
-            <li>
-              pełny raport dla każdego artykułu
-            </li>
-          </FeatureList>
-          <Price>10 zł miesięcznie</Price>
-        </PricingItem>
-      </ExternalLink>
-      <ExternalLink href='/error'>
-        <PricingItem>
-          <h1>Free</h1>
-          <FeatureList>
-            <li>
-              darmowe 10 artykułów dziennie
-            </li>
-            <li>
-              dostęp do częściowego raportu
-            </li>
-          </FeatureList>
-          <Price>za darmo</Price>
-        </PricingItem>
-      </ExternalLink>
+      <PricingItem
+        link='/error'
+        heading='Premium'
+        price='10 zł'
+        features={[
+          'dostęp do wszystkich artykułów',
+          'pełny raport dla każdego artykułu',
+          'możliwość udziału w weryfikacji nowych artykułów',
+        ]}
+      />
+      <Line />
+      <PricingItem
+        link='/error'
+        heading='Free'
+        price='0 zł'
+        features={[
+          'darmowe 10 artykułów dziennie',
+          'dostęp do częściowego raportu',
+          'brak możliwości weryfikacji nowych artykułów',
+        ]}
+      />
     </PricingWrapper>
   </Section>
 );
 
-const Price = styled.div`{
-  font-size: 30px;
-  position: absolute;
-  bottom: 10px;
-  width: 93%;
-  text-align: center;
+const Line = styled.div`{
+  float: left;
+  border-right: 2px solid black;
+  height: 320px;
+  margin-top: 3em;
+  margin-right: 7em;
+  margin-left: 7em;
 
-  color: white;
-  background: black;
-  padding-top: 5px;
-  padding-bottom: 10px;
-}`;
-
-const FeatureList = styled.ul`{
-  text-align: left;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    display: none;
+  }
 }`;
 
 const Title = styled.div`{
@@ -73,24 +60,6 @@ const PricingWrapper = styled.div`{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-}`;
-
-const PricingItem = styled.div`{
-  color: black;
-  float: left;
-  margin: 10px;
-  width: 300px;
-  height: 300px;
-  border-color: black;
-  border-style: solid;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-bottom: 30px;
-    float: none;
-  }
 }`;
 
 export default Pricing;

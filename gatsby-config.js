@@ -56,7 +56,8 @@ module.exports = {
         fonts: [
           `average`,
           `prata\:400,700`,
-          `playfair display\:400,700`
+          `playfair display\:400,700`,
+          `bebas neue\:400`,
         ],
       },
     },
