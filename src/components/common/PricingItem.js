@@ -40,7 +40,7 @@ const Price = styled.div`{
 const PricingBlock = styled.div`{
   color: black;
   float: left;
-  margin: 10px;
+  margin: 10px 50px 10px 50px;
   width: 350px;
   height: 400px;
   text-align: center;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section } from '../global';
 import PricingItem from '../common/PricingItem';
+import LineVertical from '../common/Lines';
 
 const Pricing = () => (
   <Section id='pricing'>
@@ -17,7 +18,6 @@ const Pricing = () => (
           'możliwość udziału w weryfikacji nowych artykułów',
         ]}
       />
-      <Line />
       <PricingItem
         link='/error'
         heading='Free'
@@ -32,18 +32,6 @@ const Pricing = () => (
   </Section>
 );
 
-const Line = styled.div`{
-  float: left;
-  border-right: 2px solid black;
-  height: 320px;
-  margin-top: 3em;
-  margin-right: 7em;
-  margin-left: 7em;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    display: none;
-  }
-}`;
 
 const Title = styled.div`{
   font-family: ${props => props.theme.font.primary};
