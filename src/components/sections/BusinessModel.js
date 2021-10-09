@@ -2,6 +2,9 @@ import React from 'react';
 import { Section } from '../global';
 import styled from 'styled-components';
 import mocks from '../../images/mocks/mock1.png';
+import noAdds from '../../images/mocks/no-ads.svg';
+import validityNotificationMock from '../../images/mocks/notification_mock.png';
+import singleMock from '../../images/mocks/single_mock.svg';
 
 const BusinessModel = () => (
   <Section>
@@ -21,35 +24,56 @@ const BusinessModel = () => (
           celem jest dostarczenie wartościowych i interesujących treści, a także dobro użytkownika. Dlatego opieramy
           swój model biznesowy o trzy filary:
         </p>
-        <h2>Treści pochodzą z różnych źródeł</h2>
+      </Text>
+    </Grid>
+    <Grid>
+      <Text>
+        <h2>Opłaty pobieramy tylko od użytkowników</h2>
+        <p>
+          Naszym klientem jest użytkownik. To on płaci za korzystanie z naszej aplikacji. Dlatego na <b>Washed</b> nie
+          ma denerwujących reklam, a użytkownik może być pewien, że artykuły które czyta, są pewnym źródłem informacji.
+        </p>
+      </Text>
+      <Art>
+        <img src={noAdds} />
+      </Art>
+    </Grid>
+    <Grid>
+      <Art>
+        <img src={validityNotificationMock} />
+      </Art>
+      <Text>
+        <h2>Wszystkie treści przechodzą sprawdzenie wiarygodności</h2>
+        <p>
+          Każda treść, artykuł, post, itp. zostaje sprawdzona pod kątem wiarygodności. Prośba o przegląd jest wysyłana
+          do każdego użytkownika. Uzytkownicy mogą zaakceptować prośbę a w zamian za przegląd uzyskać zniżkę, lub też
+          odrzucić przegląd i wciąż korzystać w pełni z aplikacji.
+        </p>
+      </Text>
+    </Grid>
+    <Grid>
+      <Text>
+        <h2>Różnorodność treści</h2>
         <p>
           Nie tworzymy sami artykułów i postów, które znajdziecie w <b>Washed</b>. Pochodzą one z różnych źródeł
           internetowych.
           Dzięki temu użytkownicy mają dostęp do szerokiej gamy informacji. Co więcej, użytkownicy sami budują budują
           listę źródeł, a także mogą ją ustawiać tak aby odpowiadała ich zainteresowaniom.
         </p>
-        <h2>Opłaty pobieramy tylko od użytkowników</h2>
-        <p>
-          Naszym klientem jest użytkownik. To on płaci za korzystanie z naszej aplikacji. Dlatego na <b>Washed</b> nie
-          ma
-          denerwujących reklam, a użytkownik może być pewien, że artykuły które czyta, są pewnym źródłem informacji.
-        </p>
-        <h2>Wszystkie treści przechodzą sprawdzenie wiarygodności</h2>
-        <p>
-          Każda treść, artykuł, post, itp. zostaje sprawdzona pod kątem wiarygodności. Przy każdym artykule widnieje
-          informacja o tym kto ją sprawdził i jaką wystawił ocenę. Robią to specjalni użytkownicy, tak zwani reviewerzy.
-        </p>
       </Text>
+      <Art>
+        <img src={singleMock} />
+      </Art>
     </Grid>
   </Section>
 );
 
 const Text = styled.div`{
-  margin-right: 50px;
+  margin: 50px;
   font-family: ${props => props.theme.font.secondary};
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    margin-right: 0px;
+    margin: 0px;
     padding: 10px;
   }
 
@@ -63,6 +87,7 @@ const Text = styled.div`{
     font-family: ${props => props.theme.font.secondary};
     margin-bottom: 10px;
     margin-top: 30px;
+    font-weight: bold;
   }
 
   p {
@@ -72,8 +97,9 @@ const Text = styled.div`{
 }`;
 
 const Art = styled.figure`
-  width: 100%;
-  margin: 0;
+  width: 70%;
+  margin: auto;
+
   img {
     width: 100%;
     @media (max-width: ${props => props.theme.screen.md}) {
@@ -85,7 +111,7 @@ const Art = styled.figure`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 64px;
+  grid-gap: 30px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
